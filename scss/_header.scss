@@ -1,0 +1,120 @@
+@import 'colors';
+@import 'fonts';
+
+.burger__menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -20px;
+    bottom: 0;
+    z-index: 200;
+    background-color: $primary;
+    transform: translateX(100%);
+    transition: transform 1s ease-in-out;
+    visibility: hidden;
+    // transition: visibility 1s;
+    // padding: 20px;
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+
+    &__burger {
+        color: $primary;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+    }
+
+    &__container {
+        max-width: 1230px;
+        padding: 20px 15px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__col {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: initial;
+    }
+
+    &__logo {
+        background-image: url(../img/logo.svg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 140px;
+        height: 22px;
+    }
+
+    &__socials {
+        display: none;
+        list-style: none;
+        padding: 0;
+        gap: 15px;
+
+        @media (min-width: 1050px) {
+            display: flex;
+        }
+    }
+
+    &__menu {
+        display: none;
+        list-style: none;
+        padding: 0;
+        gap: 15px;
+
+        @media (min-width: 1050px) {
+            display: flex;
+        }
+
+        &_burger {
+            display: block;
+            padding: 40px 20px 20px 20px;
+            font-size: 0.952rem;
+            max-width: 122px;
+            margin: 0 auto;
+
+            &>li>a {
+                color: white;
+                font-size: 0.476rem;
+            }
+
+            &>li:first-child {
+                padding-left: calc(50% + 100px);
+            }
+        }
+
+        &>li>a {
+            text-decoration: none;
+        }
+
+        &-arrow>li:first-child a {
+            font-weight: $fw-600;
+
+            &::after {
+                position: relative;
+                top: 4px;
+                left: 4px;
+                content: url(../img/arrowdown.svg);
+            }
+        }
+
+        &-btn {
+            border: none;
+            background-color: inherit;
+
+            @media (min-width: 1050px) {
+                display: none;
+            }
+        }
+
+        // @media (min-width: 1050px) {
+        //     display: flex;
+        // }
+    }
+}

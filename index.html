@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lab 5 Manskova 221-321</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <svg class="invisible">
+        <symbol>
+            <path id="burger_menu" d="
+      M 0 0
+      l 50 0
+      M 0 15
+      l 50 0
+      M 0 30
+      l 50 0" stroke-width="5" stroke="currentColor" stroke-linecap="round">
+            </path>
+            <path id="cross" d="M 0 0
+            l 50 40
+            M 50 0
+            l -50 40" stroke-width="5" stroke="white" stroke-linecap="round">
+            </path>
+        </symbol>
+    </svg>
+
+    <a class="skip-link" href="#main">
+        Go to the main content
+    </a>
+
+    <header class="header">
+        <div class="header__container">
+            <div class="header__col">
+                <div class="header__logo"></div>
+
+                <ul class="header__menu header__menu-arrow">
+                    <li><a aria-label="Going to the product page" class="text text_main" href="#catalog">Shop now</a>
+                    </li>
+                    <li><a aria-label="Go to a text page with a description of how you can combine things from our store"
+                            class="text text_main" href="#aside">How to Wear</a></li>
+                    <li><a aria-label="Go to the page of our partners" class="text text_main"
+                            href="#gallery">Colaboration</a>
+                    </li>
+                    <li><a aria-label="Go to the page of our partners" class="text text_main" href="#news">Meta News</a>
+                    </li>
+                    <li><a aria-label="Go to a text page with a description of the concept of our brand"
+                            class="text text_main" href="#page">About</a></li>
+                    <li><a aria-label="Go to 8 laba js animation" class="text text_main" href="animation.html">Anime</a>
+                    </li>
+                    <li><a aria-label="Go to 10 laba fetch api" class="text text_main" href="fetch.html">Fetch</a>
+                    </li>
+                    <li><a aria-label="Go to 10 laba fetch api" class="text text_main" href="vue.html">Vue</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header__col">
+                <ul class="header__socials">
+                    <li><a aria-label="Go to instagram" href="/#"><img src="../img/inst.svg" alt="Our instagram"></a>
+                    </li>
+                    <li><a aria-label="Go to tiktok" href="/#"><img src="../img/tiktok.svg" alt="Our  tiktok"></a></li>
+                    <li><a aria-label="Go to twitter" href="/#"><img src="../img/twitter.svg" alt="Our twitter"></a>
+                    </li>
+                    <li><a aria-label="Go to pinterest" href="/#"><img src="../img/pinterest.svg"
+                                alt="Our pinterest"></a></li>
+                    <li><a aria-label="Go to discord" href="/#"><img src="../img/discord.svg" alt="Our discord"></a>
+                    </li>
+                </ul>
+                <button class="btn btn_dark_outline">
+                    <span class="btn__prepend">
+                        <a href="/#" class="icon icon_cart" aria-label="Go to bag"></a>
+                    </span>
+                    <span class="btn__append">
+                        <span class="badge">1</span>
+                    </span>
+                </button>
+                <button aria-label="Button of opening burger menu" class="header__menu-btn"><svg alt=""
+                        viewBox="0 -20 40 70" width="30" height="30" class="header__burger">
+                        <use href="#burger_menu"></use>
+                    </svg></button>
+            </div>
+
+        </div>
+    </header>
+
+
+
+    <main id="main">
+        <div class="burger__menu">
+            <ul class="header__menu header__menu_burger">
+                <li><button aria-label="Button of closing burger menu" class="header__menu-btn"><svg alt=""
+                            viewBox="0 -20 40 70" width="30" height="30" class="header__burger_cross">
+                            <use href="#cross"></use>
+                        </svg></button></li>
+                <li><a class="text text_main" href="#catalog">Shop now</a></li>
+                <li><a class="text text_main" href="#aside">How to Wear</a></li>
+                <li><a class="text text_main" href="#gallery">Colaboration</a></li>
+                <li><a class="text text_main" href="#news">Meta News</a></li>
+                <li><a class="text text_main" href="#page">About</a></li>
+            </ul>
+        </div>
+        <section class="description">
+            <div class="description__container">
+                <div class="description__text">
+                    <h1>Digital Fashion Studio</h1>
+                    <p class="text text_main">We create digital clothing and connect it with real people</p>
+                    <button aria-label="Going to the product page" class="btn btn-primary">Shop now</button>
+                </div>
+                <div class="img description__img"></div>
+            </div>
+        </section>
+
+        <section class="catalog" id="catalog">
+            <div class="catalog__nav">
+                <span class="btn btn_dark_outline">BEST SELLER</span>
+                <div class="img-nav"></div>
+                <button aria-label="Go to the catalog" class="btn btn-primary btn-invisible">View all</button>
+            </div>
+            <div class="arrows">
+                <button aria-label="Swipe the slider one position to the left"
+                    class="arrow arrow-back arrow-disabled">&lt;</button>
+                <button aria-label="Swipe the slider one position to the right"
+                    class="arrow arrow-forward">&gt;</button>
+            </div>
+            <div class="catalog__container">
+                <div id="slider" class="slider">
+                    <div class="slider__card active">
+                        <picture class="slider__img">
+                            <source srcset="img/jacket-medium.png" media="(min-width: 1000px)">
+                            <img src="img/jacket-small.png"
+                                alt="Photo of our product - orange jacket with hood, model number...">
+                        </picture>
+                        <div class="slider__text"><span class="text text_catalog">0Balmlabs</span>
+                            <span class="title title_catalog">Cropped Puffy Jacket</span>
+                        </div>
+                        <button aria-label="Go to the product page" class="btn btn_dark_outline">
+                            $40.00 USD
+                        </button>
+                    </div>
+                    <div class="slider__card">
+                        <picture class="slider__img">
+                            <source srcset="img/jacket-medium.png" media="(min-width: 1000px)">
+                            <img src="img/jacket-small.png"
+                                alt="Photo of our product - orange jacket with hood, model number...">
+                        </picture>
+                        <div class="slider__text"><span class="text text_catalog">1Balmlabs</span>
+                            <span class="title title_catalog">Cropped Puffy Jacket</span>
+                        </div>
+                        <button aria-label="Go to the product page" class="btn btn_dark_outline">
+                            $40.00 USD
+                        </button>
+                    </div>
+                    <div class="slider__card">
+                        <picture class="slider__img">
+                            <source srcset="img/jacket-medium.png" media="(min-width: 1000px)">
+                            <img src="img/jacket-small.png"
+                                alt="Photo of our product - orange jacket with hood, model number...">
+                        </picture>
+                        <div class="slider__text"><span class="text text_catalog">2Balmlabs</span>
+                            <span class="title title_catalog">Cropped Puffy Jacket</span>
+                        </div>
+                        <button aria-label="Go to the product page" class="btn btn_dark_outline">
+                            $40.00 USD
+                        </button>
+                    </div>
+                    <div class="slider__card">
+                        <picture class="slider__img">
+                            <source srcset="img/jacket-medium.png" media="(min-width: 1000px)">
+                            <img src="img/jacket-small.png"
+                                alt="Photo of our product - orange jacket with hood, model number...">
+                        </picture>
+                        <div class="slider__text"><span class="text text_catalog">3Balmlabs</span>
+                            <span class="title title_catalog">Cropped Puffy Jacket</span>
+                        </div>
+                        <button aria-label="Go to the product page" class="btn btn_dark_outline">
+                            $40.00 USD
+                        </button>
+                    </div>
+                    <div class="slider__card">
+                        <picture class="slider__img">
+                            <source srcset="img/jacket-medium.png" media="(min-width: 1000px)">
+                            <img src="img/jacket-small.png"
+                                alt="Photo of our product - orange jacket with hood, model number...">
+                        </picture>
+
+                        <div class="slider__text"><span class="text text_catalog">4Balmlabs</span>
+                            <span class="title title_catalog">Cropped Puffy Jacket</span>
+                        </div>
+                        <button aria-label="Go to the product page" class="btn btn_dark_outline">
+                            $40.00 USD
+                        </button>
+                    </div>
+                    <div class="slider__card">
+                        <picture class="slider__img">
+                            <source srcset="img/jacket-medium.png" media="(min-width: 1000px)">
+                            <img src="img/jacket-small.png"
+                                alt="Photo of our product - orange jacket with hood, model number...">
+                        </picture>
+
+                        <div class="slider__text"><span class="text text_catalog">5Balmlabs</span>
+                            <span class="title title_catalog">Cropped Puffy Jacket</span>
+                        </div>
+                        <button aria-label="Go to the product page" class="btn btn_dark_outline">
+                            $40.00 USD
+                        </button>
+                    </div>
+                    <div class="slider__card">
+                        <picture class="slider__img">
+                            <source srcset="img/jacket-medium.png" media="(min-width: 1000px)">
+                            <img src="img/jacket-small.png"
+                                alt="Photo of our product - orange jacket with hood, model number...">
+                        </picture>
+
+                        <div class="slider__text"><span class="text text_catalog">6Balmlabs</span>
+                            <span class="title title_catalog">Cropped Puffy Jacket</span>
+                        </div>
+                        <button aria-label="Go to the product page" class="btn btn_dark_outline">
+                            $40.00 USD
+                        </button>
+                    </div>
+                    <div class="slider__card">
+                        <picture class="slider__img">
+                            <source srcset="img/jacket-medium.png" media="(min-width: 1000px)">
+                            <img src="img/jacket-small.png"
+                                alt="Photo of our product - orange jacket with hood, model number...">
+                        </picture>
+
+                        <div class="slider__text"><span class="text text_catalog">7Balmlabs</span>
+                            <span class="title title_catalog">Cropped Puffy Jacket</span>
+                        </div>
+                        <button aria-label="Go to the product page" class="btn btn_dark_outline">
+                            $40.00 USD
+                        </button>
+                    </div>
+                    <div class="slider__card">
+                        <picture class="slider__img">
+                            <source srcset="img/jacket-medium.png" media="(min-width: 1000px)">
+                            <img src="img/jacket-small.png"
+                                alt="Photo of our product - orange jacket with hood, model number...">
+                        </picture>
+
+                        <div class="slider__text"><span class="text text_catalog">8Balmlabs</span>
+                            <span class="title title_catalog">Cropped Puffy Jacket</span>
+                        </div>
+                        <button aria-label="Go to the product page" class="btn btn_dark_outline">
+                            $40.00 USD
+                        </button>
+                    </div>
+                    <div class="slider__card">
+                        <picture class="slider__img">
+                            <source srcset="img/jacket-medium.png" media="(min-width: 1000px)">
+                            <img src="img/jacket-small.png"
+                                alt="Photo of our product - orange jacket with hood, model number...">
+                        </picture>
+
+                        <div class="slider__text"><span class="text text_catalog">9Balmlabs</span>
+                            <span class="title title_catalog">Cropped Puffy Jacket</span>
+                        </div>
+                        <button aria-label="Go to the product page" class="btn btn_dark_outline">
+                            $40.00 USD
+                        </button>
+                    </div>
+                    <div class="slider__card">
+                        <picture class="slider__img">
+                            <source srcset="img/jacket-medium.png" media="(min-width: 1000px)">
+                            <img src="img/jacket-small.png"
+                                alt="Photo of our product - orange jacket with hood, model number...">
+                        </picture>
+                        <div class="slider__text"><span class="text text_catalog">10Balmlabs</span>
+                            <span class="title title_catalog">Cropped Puffy Jacket</span>
+                        </div>
+                        <button aria-label="Go to the product page" class="btn btn_dark_outline">
+                            $40.00 USD
+                        </button>
+                    </div>
+                    <div class="slider__card">
+                        <picture class="slider__img">
+                            <source srcset="img/jacket-medium.png" media="(min-width: 1000px)">
+                            <img src="img/jacket-small.png"
+                                alt="Photo of our product - orange jacket with hood, model number...">
+                        </picture>
+
+                        <div class="slider__text"><span class="text text_catalog">11Balmlabs</span>
+                            <span class="title title_catalog">Cropped Puffy Jacket</span>
+                        </div>
+                        <button aria-label="Go to the product page" class="btn btn_dark_outline">
+                            $40.00 USD
+                        </button>
+                    </div>
+                    <div class="slider__card">
+                        <picture class="slider__img">
+                            <source srcset="img/jacket-medium.png" media="(min-width: 1000px)">
+                            <img src="img/jacket-small.png"
+                                alt="Photo of our product - orange jacket with hood, model number...">
+                        </picture>
+
+                        <div class="slider__text"><span class="text text_catalog">12Balmlabs</span>
+                            <span class="title title_catalog">Cropped Puffy Jacket</span>
+                        </div>
+                        <button aria-label="Go to the product page" class="btn btn_dark_outline">
+                            $40.00 USD
+                        </button>
+                    </div>
+                    <div class="slider__card">
+                        <picture class="slider__img">
+                            <source srcset="img/jacket-medium.png" media="(min-width: 1000px)">
+                            <img src="img/jacket-small.png"
+                                alt="Photo of our product - orange jacket with hood, model number...">
+                        </picture>
+
+                        <div class="slider__text"><span class="text text_catalog">13Balmlabs</span>
+                            <span class="title title_catalog">Cropped Puffy Jacket</span>
+                        </div>
+                        <button aria-label="Go to the product page" class="btn btn_dark_outline">
+                            $40.00 USD
+                        </button>
+                    </div>
+                    <div class="slider__card">
+                        <picture class="slider__img">
+                            <source srcset="img/jacket-medium.png" media="(min-width: 1000px)">
+                            <img src="img/jacket-small.png"
+                                alt="Photo of our product - orange jacket with hood, model number...">
+                        </picture>
+
+                        <div class="slider__text"><span class="text text_catalog">14Balmlabs</span>
+                            <span class="title title_catalog">Cropped Puffy Jacket</span>
+                        </div>
+                        <button aria-label="Go to the product page" class="btn btn_dark_outline">
+                            $40.00 USD
+                        </button>
+                    </div>
+                    <div class="slider__card">
+                        <picture class="slider__img">
+                            <source srcset="img/jacket-medium.png" media="(min-width: 1000px)">
+                            <img src="img/jacket-small.png"
+                                alt="Photo of our product - orange jacket with hood, model number...">
+                        </picture>
+
+                        <div class="slider__text"><span class="text text_catalog">15Balmlabs</span>
+                            <span class="title title_catalog">Cropped Puffy Jacket</span>
+                        </div>
+                        <button aria-label="Go to the product page" class="btn btn_dark_outline">
+                            $40.00 USD
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <button class="btn btn-primary btn-primary-full btn-visible">View all</button>
+        </section>
+        <section class="aside" id="aside">
+            <div class="aside__container aside__container_main">
+                <h2 class="title">How to wear a digital garment</h2>
+                <button aria-label="go to the catalog page of our store" class="btn btn-primary btn-invisible">Visit
+                    shop</button>
+            </div>
+            <div class="aside__container">
+                <div class="aside__block">
+                    <button class="btn btn_dark_outline btn_dark_outline_small">STEP 1</button>
+                    <p class="title title_subtitle">Choose outfit</p>
+                    <span class="text">Got to our store and choose the outfits you like</span>
+                </div>
+                <div class="aside__block">
+                    <button class="btn btn_dark_outline btn_dark_outline_small">STEP 2</button>
+                    <p class="title title_subtitle">Upload photo</p>
+                    <span class="text">To get the best results, read the photo requirements</span>
+                </div>
+                <div class="aside__block">
+                    <button class="btn btn_dark_outline btn_dark_outline_small">STEP 3</button>
+                    <p class="title title_subtitle">Pay</p>
+                    <span class="text">Pay with cash or crypto</span>
+                </div>
+                <button aria-label="go to the catalog page of our store"
+                    class="btn btn-primary btn-primary-full btn-visible">Visit shop</button>
+        </section>
+
+        <section class="gallery" id="gallery">
+            <div class="wrap">
+                <div class="gallery__grid">
+                    <img class="gallery__img gallery__img-left" src="/img/whitedress.png"
+                        alt="Photo of women in white dress with a lush bottom and leather top of new collection of our shop">
+                    <img class="gallery__img gallery__img-center" src="/img/vest.png"
+                        alt="Photo of a maneken in short red puffed vest made of natural materials of new collection of our shop">
+                    <img class="gallery__img gallery__img-center" src="/img/scalesdress.png"
+                        alt="Photo of a maneken in grey dress with a snake print in a green shade of new collection of our shop">
+                    <img class="gallery__img gallery__img-right" src="/img/reddress.png"
+                        alt="Photo of women in a red dress with a lush bottom and a bow">
+                    <button go to the main page of our brand class="btn btn-primary btn-primary-full">
+                        <span class="btn__prepend">
+                            <span class="i i_inst"></span>
+                        </span>
+                        <span class="btn__content">
+                            @Verseser
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="preview" id="news">
+            <div class="preview__wrap">
+
+                <div class="preview__buttons">
+                    <button class="btn btn_dark_outline btn_dark_outline_small btn-flex">NEWS</button>
+                    <button class="btn btn-primary btn-invisible">View all</button>
+                </div>
+                <div class="card">
+                    <img class="card__img card__img_first" src="../img/firstcard.png"
+                        alt="Photo of a maneken in short red puffed vest made of natural materials of new collection of our shop">
+                    <div class="card__block">
+                        <span class="title title_date">01.05.2022</span>
+                        <h2 class="title title_aside">Gounders Natalia Modenova and Daria Shapovalova featured in
+                            America's
+                            Greatest Disruptors list by
+                            Newsweek</h2>
+                        <a tabindex="0" aria-label="Go to the page with the article"
+                            class="btn btn-secondary btn-secondary-full">Read more</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card__img card__img_second" src="../img/secondcard.png"
+                        alt="Photo of a woman in tight white dress with black mesh print of new collection of our shop">
+                    <div class="card__block">
+                        <span class="title title_date">01.05.2022</span>
+                        <h2 class="title title_aside">Gounders Natalia Modenova and Daria Shapovalova featured in
+                            America's
+                            Greatest Disruptors list by
+                            Newsweek</h2>
+                        <a tabindex="0" aria-label="Go to the page with the article"
+                            class="btn btn-secondary btn-secondary-full">Read more</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card__img card__img_third" src="../img/thirdcard.png"
+                        alt="Photo of a maneken in grey dress with a snake print in a green shade of new collection of our shop">
+                    <div class="card__block">
+                        <span class="title title_date">01.05.2022</span>
+                        <h2 class="title title_aside">Gounders Natalia Modenova and Daria Shapovalova featured in
+                            America's
+                            Greatest Disruptors list by
+                            Newsweek</h2>
+                        <a tabindex="0" aria-label="Go to the page with the article"
+                            class="btn btn-secondary btn-secondary-full">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page" id="page">
+            <div class="page__wrap">
+                <div class="page__container">
+                    <h2 class="title">About Verseser</h2>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut
+                        labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip
+                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                        dolore eu
+                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                        deserunt mollit anim id est laborum.</p>
+                    <button aria-label="Going to the product page" class="btn btn-primary btn-primary-full">Shop
+                        now</button>
+                </div>
+                <img class="page__img" src="/img/maneken.png" srcset="/img/pagesmall.png 345w, /img/pagebig.png 663w"
+                    alt="A mannequin in a delicate pink dress with rectangular shiny inserts as a decor">
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__wrap">
+            <div class="footer__info footer__info_padding">
+                <div class="footer__icons">
+                    <div class="footer__logo"></div>
+                    <ul class="footer__socials">
+                        <li><a aria-label="Go to instagram" href="/#"><img src="../img/inst.svg"
+                                    alt="Our instagram"></a></li>
+                        <li><a aria-label="Go to tiktok" href="/#"><img src="../img/tiktok.svg" alt="Our  tiktok"></a>
+                        </li>
+                        <li><a aria-label="Go to twitter" href="/#"><img src="../img/twitter.svg" alt="Our twitter"></a>
+                        </li>
+                        <li><a aria-label="Go to pinterest" href="/#"><img src="../img/pinterest.svg"
+                                    alt="Our pinterest"></a></li>
+                        <li><a aria-label="Go to discord" href="/#"><img src="../img/discord.svg" alt="Our discord"></a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="footer__menu">
+                    <li><a aria-label="Going to the product page" class="text" href="/#">Shop now</a></li>
+                    <li><a aria-label="Go to a text page with a description of how you can combine things from our store"
+                            class="text" href="/#">How to Wear</a></li>
+                    <li><a aria-label="Go to the page of our partners" class="text" href="/#">Colaboration</a></li>
+                    <li><a aria-label="Go to the page of our partners" class="text" href="/#">Meta News</a></li>
+                    <li><a aria-label="Go to a text page with a description of the concept of our brand" class="text"
+                            href="/#">About</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <hr class="footer__line" color="#E2E2E2" width="100%" size="1px">
+
+        <div class="footer__wrap">
+
+            <div class="footer__info footer__info_hr">
+                <div class="footer__contact">
+                    <span class="text text_main text_main_600">CONTACT US</span>
+                    <span class="text text_main text_main_600"><a aria-label="Contact to our email"
+                            href="/#">INFO@VERSESER.COM</a></span>
+                </div>
+                <hr class="footer__line footer__line-invisible" color="#E2E2E2" width="100%" size="1px" />
+                <span class="text text_footer">Verseser © 2022 All rights reserved</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <div class="toast">
+        <div class="toast__header">
+            <p class="toast__name">Name</p>
+            <button class="toast__close-btn">x</button>
+        </div>
+        
+        <p class="toast__message">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ea aliquid quia, voluptates temporibus,
+            placeat fugit incidunt, error recusandae vitae voluptatum eveniet doloremque dolorum impedit architecto ab
+            sapiente illo modi.
+        </p>
+    </div> -->
+
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>

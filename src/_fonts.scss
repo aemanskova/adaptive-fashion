@@ -1,0 +1,11 @@
+$font-serif: "DM Serif Display", serif;
+$font-sans-serif: "Lato", sans-serif;
+
+@mixin font-face($family, $weight, $style) {
+  font-family: $family;
+  font-weight: $weight;
+  font-style: $style;
+  }
+
+
+

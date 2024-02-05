@@ -1,0 +1,30 @@
+$primary-color: #ffecd1;
+$primary-button-color: #15616d;
+$secondary-button-color: #ff7d00;
+$color-text: #001524;
+$color-bg: #78290f;
+$lighten: 5;
+$darken: 25;
+
+$colors: (
+    primary: (base: $primary-color,
+        light: lighten($primary-color, $lighten),
+        dark: darken($primary-color, $darken)),
+        button: (base: $primary-button-color,
+        secondary-base: $secondary-button-color,
+        light: lighten($secondary-button-color, $lighten),
+        dark: darken($secondary-button-color, $darken),
+    ),
+    text: (base: $color-text,
+        bg: $color-bg,
+    )
+);
+
+@function clr($base, $shade: base) {
+    $color: map-get(map-get($colors, $base), $shade);
+    @return $color;
+}
+
+@mixin linear-gradient($fromColor, $toColor) {
+    background-image: linear-gradient(to right, $froColor, $toColor);
+}

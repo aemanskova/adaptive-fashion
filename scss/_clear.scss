@@ -1,0 +1,25 @@
+body,
+header,
+section,
+footer,
+h2,
+h1 {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.wrap {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+html, body { height: 100%;}
+
+body > footer {
+  position: sticky;
+  top: 100vh;
+}
+
+.invisible {
+  display: none;
+}

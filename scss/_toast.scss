@@ -1,0 +1,37 @@
+.toast {
+    position: fixed;
+    max-width: 320px;
+    height: max-content;
+    width: calc(100% - 10px);
+    background-color: white;
+    border-radius: 16px;
+    padding: 20px;
+    bottom: 5px;
+    right: 5px;
+    font-size: 0.429rem;
+    overflow-x: hidden;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.571rem;
+    }
+
+    &__name {
+        margin: 0;
+    }
+
+    &__close-btn {
+        cursor: pointer;
+        padding: 5px;
+        border: none;
+        background-color: inherit;
+    }
+
+    &__hidden {
+        opacity: 0;
+        transition: opacity 1.2s;
+    }
+
+    
+}

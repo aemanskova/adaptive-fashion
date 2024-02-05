@@ -1,0 +1,109 @@
+@import 'fonts';
+@import 'colors';
+
+html {
+    font-size: 42px;
+}
+
+h1 {
+    font-size: 0.7619rem;
+    margin-bottom: 8px;
+
+    @media (min-width: 1000px) {
+        font-size: 1rem;
+    }
+}
+
+.title {
+    font-weight: $fw-600;
+    font-size: 0.619rem;
+    color: $primary;
+
+    @media (min-width: 1000px) {
+        font-size: 1rem;
+    }
+
+    &_aside {
+        font-size: 0.476rem;
+
+        @media (min-width: 1000px) {
+            font-size: 0.571rem;
+        }
+    }
+
+    &_subtitle {
+        font-size: 0.429rem;
+        margin: 8px 0 0;
+
+        @media (min-width: 1000px) {
+            font-size: 0.571rem;
+        }
+    }
+
+    &_catalog {
+        font-size: 0.333rem;
+
+        @media (min-width: 1000px) {
+            font-size: 0.429rem;
+        }
+    }
+
+    &_date {
+        font-size: 0.286rem;
+    }
+
+
+}
+
+.text {
+    font-weight: $fw-400;
+    font-size: 0.333rem;
+    line-height: 169.02%;
+    color: $secondary;
+
+
+    &_main {
+        font-size: 0.357rem;
+
+        &_600 {
+            font-weight: $fw-600;
+        }
+
+        @media (min-width: 1000px) {
+            font-size: 0.429rem;
+        }
+    }
+
+    &_catalog {
+        color: $tertiary;
+        font-weight: $fw-600;
+    }
+
+    &_footer {
+        color: $borderofpic;
+    }
+
+
+}
+
+
+
+.gallery {
+    margin: 20px 15px;
+}
+
+.skip-link {
+    font-size: 0.3rem;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 15px;
+    background: $secondary;
+    color: $white;
+    transform: translateY(-100%);
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}

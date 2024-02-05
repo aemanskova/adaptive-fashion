@@ -1,0 +1,107 @@
+@import 'colors';
+@import 'fonts';
+
+// .btn-primary:focus {
+//     outline: 2px solid #ffffff;
+//     outline-offset: 3px;
+//     border: 2px solid #ffffff;
+// }
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    &-flex {
+        justify-self: flex-start;
+        align-self: flex-start;
+    }
+
+    &-visible {
+        @media (min-width: 1000px) {
+            display: none;
+        }
+    }
+
+    &-invisible {
+        display: none;
+
+        @media (min-width: 1000px) {
+            display: block;
+            align-self: flex-start;
+        }
+    }
+
+    &__prepend {
+        display: flex;
+        align-items: center;
+    }
+
+    &__append {
+        display: flex;
+    }
+
+    &_dark_outline {
+        background-color: transparent;
+        padding: 10px 15px;
+        border: solid 1px black;
+        border-radius: 2px;
+        font-weight: $fw-600;
+        font-size: 0.333rem;
+
+        &_small {
+            padding: 4px 8px;
+        }
+    }
+
+    &-primary {
+        border: none;
+        background-color: $secondary;
+        padding: 15px 40px;
+        border-radius: 80px;
+        color: $white;
+        font-size: 0.357rem;
+        font-weight: $fw-600;
+
+        &:focus {
+            outline: 2px solid $tertiary;
+            outline-offset: 3px;
+        }
+
+        &-full {
+            width: 100%;
+
+            @media (min-width: 500px) {
+                width: auto;
+                align-self: flex-start;
+                justify-self: center;
+            }
+        }
+    }
+
+
+    &-secondary {
+        max-width: 100%;
+        border: 1px solid $tertiary;
+        background-color: transparent;
+        padding: 15px 40px;
+        border-radius: 80px;
+        color: $secondary;
+        font-size: 0.357rem;
+        font-weight: $fw-600;
+
+        &:focus {
+            outline: 3px solid $tertiary;
+            outline-offset: 3px;
+        }
+
+        &-full {
+
+            @media (min-width: 1000px) {
+                width: auto;
+                align-self: flex-start;
+            }
+        }
+    }
+}

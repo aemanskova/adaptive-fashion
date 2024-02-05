@@ -1,0 +1,9 @@
+@import 'colors';
+
+.badge {
+    background-color: $primary;
+    border-radius: 100%;
+    padding: 2px 5px;
+    color: white;
+    font-size: 0.238rem;
+}

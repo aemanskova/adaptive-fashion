@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <form v-on:submit="addEntry">
+            <div>
+                <label for="entry">Текст новой записи</label>
+                <textarea v-bind:class="(text.length > 144) ? 'danger' : ''" v-model="text" name="entry" rows="5"
+                    cols="33"></textarea>
+            </div>
+
+            <div>
+                <button type="submit" :disabled="text.length == 0">Добавить</button>
+                <p :class="(144 - text.length < 10) ? (text.length > 144 ? 'danger' : 'warning') : ''"
+                    v-if="text.length > 0">{{ text.length }}/144</p>
+            </div>
+        </form>
+
+        <section class="entry">
+            <div class="entry__header">
+                <span v-if="entries.length === 0">{{ message.noEntries}}</span>
+                <span v-else-if="entries.length === 1">{{ message.oneEntry}}</span>
+                <span v-else>{{ message.anyEntries}}</span>
+                <span v-if="entries.length > 1">{{ entries.length }}</span>
+            </div>
+            <div class="entry__item" v-for="(entry, key) in entries" v-key="key">
+                <p class="entry__text">{{ entry.text }}</p>
+                <p>{{ new Intl.DateTimeFormat('ru', {year: "numeric", month: "numeric", day: "numeric", hour:
+                    "numeric", minute: "numeric"}).format(entry.date) }}</p>
+            </div>
+
+        </section>
+
+    </div>
+
+    <script>
+        const { createApp } = Vue
+
+        createApp({
+            data() {
+                return {
+                    message:
+                        { noEntries: 'Нет записей', oneEntry: 'Запись', anyEntries: 'Записи' },
+                    entries: [],
+                    text: "",
+                }
+            },
+            methods: {
+                addEntry(event) {
+                    event.preventDefault();
+
+                    let formData = new FormData(event.target);
+
+                    this.entries.push({
+                        text: formData.get('entry'),
+                        date: Date.now()
+                    });
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+
+</html>

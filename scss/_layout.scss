@@ -1,0 +1,61 @@
+@import 'fonts';
+@import 'colors';
+
+body {
+    font-family: $font;
+    font-weight: $fw-600;
+}
+
+p {
+    font-weight: $fw-400;
+}
+
+.img-nav {
+    display: flex;
+    gap: 16px;
+}
+
+.img-nav__circle {
+    width: 4px;
+    height: 4px;
+    background-color: $secondary;
+    opacity: 0.2;
+    border-radius: 50%;
+
+    &--active {
+        opacity: 100%;
+        width: 6px;
+        height: 6px;
+    }
+}
+
+.bestseller {
+    display: flex;
+    justify-content: space-between;
+}
+
+.digital_img {
+    background-image: url(../img/firstsectiongirls.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 446px;
+    height: 476px;
+}
+
+// .card__img {
+//     background-image: url(../img/jacket.png);
+//     width: 168px;
+//     height: 240px;
+//     background-position: center;
+//     background-size: contain;
+//     background-repeat: no-repeat;
+// }
+
+.card_heading {
+    color: $tertiary;
+}
+
+.card_text {
+    color: $primary;
+}

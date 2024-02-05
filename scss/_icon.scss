@@ -1,0 +1,35 @@
+.icon {
+    display: inline-block;
+
+    width: 18px;
+    height: 18px;
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &_cart {
+        background-image: url(../img/bag.svg);
+    }
+
+    &_inst {
+        background-image: url(../img/inst.svg);
+    }
+
+    &_tiktok {
+        background-image: url(../img/tiktok.svg);
+    }
+
+    &_twitter {
+        background-image: url(../img/twitter.svg);
+    }
+
+    &_pinterest {
+        background-image: url(../img/pinterest.svg);
+    }
+
+    &_discord {
+        background-image: url(../img/discord.svg);
+    }
+}
+

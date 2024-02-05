@@ -1,0 +1,79 @@
+.gallery {
+    @media (min-width: 700px) {
+       padding: 20px 100px;
+           
+    }
+}
+
+.gallery__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto max-content;
+    gap: 14px 14px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "left left"
+        ". ."
+        "right right"
+        "btn btn";
+    width: 100%;
+    margin: 20px 0;
+
+    @media (min-width: 700px) {
+        grid-template-columns: 1.5fr 1fr 1.5fr;
+        grid-template-rows: 0.2fr 1fr 1fr;
+        grid-template-areas:
+            "btn btn btn"
+            "left . right"
+            "left . right";
+           
+    }
+}
+
+.gallery__img {
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+
+    @media (min-width: 700px) {
+        object-position: center;
+    }
+
+    &-left {
+        grid-area: left;
+        height: max-content;
+
+        @media (min-width: 700px) {
+            height: 580px;
+        }
+    }
+
+    &-right {
+        grid-area: right;
+        height: max-content;
+
+        @media (min-width: 700px) {
+            height: 580px;
+        }
+    }
+
+    &-center {
+        height: 168px;
+        @media (min-width: 700px) {
+            height: 280px;
+        }
+    }
+}
+
+.gallery__grid>button {
+    grid-area: btn;
+
+    @media (min-width: 700px) {
+        justify-self: end;
+        width: auto;
+    }
+
+}
